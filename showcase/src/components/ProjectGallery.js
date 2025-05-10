@@ -36,7 +36,6 @@ export default function ProjectsGallery() {
                 <p className="text-sm text-gray-600 mb-4 line-clamp-3">{repo.description}</p>
               </div>
               <div className="flex items-center justify-between text-sm text-gray-700 font-medium mt-2">
-                <span>⭐ <strong>{repo.stargazers_count}</strong></span>
                 <span><strong>{repo.language}</strong></span>
               </div>
               <a
