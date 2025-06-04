@@ -18,7 +18,7 @@ export default function ProjectsGallery() {
   }, [])
 
   return (
-    <section id="projects" className="py-20 px-4 bg-white">
+    <section id="projects" className="py-4 px-4 bg-white">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-6 text-gray-900">Projects</h2>
         <p className="text-gray-600 mb-12 max-w-xl mx-auto">
