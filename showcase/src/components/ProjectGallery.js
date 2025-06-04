@@ -11,7 +11,7 @@ export default function ProjectsGallery() {
       const data = await res.json()
       const filtered = data
         .filter(repo => !repo.fork)
-        .sort((a, b) => b.stargazers_count - a.stargazers_count)
+        .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
       setRepos(filtered)
     }
     fetchRepos()
@@ -22,7 +22,7 @@ export default function ProjectsGallery() {
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-6 text-gray-900">Projects</h2>
         <p className="text-gray-600 mb-12 max-w-xl mx-auto">
-          A selection of my public GitHub repositories, sorted by popularity.
+          A selection of my public GitHub repositories, sorted by latest activity.
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
